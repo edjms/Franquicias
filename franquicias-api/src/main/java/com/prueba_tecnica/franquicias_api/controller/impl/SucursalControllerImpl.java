@@ -3,14 +3,11 @@ package com.prueba_tecnica.franquicias_api.controller.impl;
 import com.prueba_tecnica.franquicias_api.controller.SucursalController;
 import com.prueba_tecnica.franquicias_api.model.Sucursal;
 import com.prueba_tecnica.franquicias_api.service.SucursalService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @Service
@@ -30,4 +27,5 @@ public class SucursalControllerImpl implements SucursalController {
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
 }

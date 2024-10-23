@@ -32,4 +32,5 @@ public class SucursalServiceImpl implements SucursalService {
     public Optional<Sucursal> consultarPorNombre(String nombre) {
         return sucursalRepository.findByNombre(nombre);
     }
+
 }

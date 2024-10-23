@@ -20,7 +20,7 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 30,unique = true)
+    @Column(nullable = false, length = 30)
     private String nombre;
 
     private int stock;

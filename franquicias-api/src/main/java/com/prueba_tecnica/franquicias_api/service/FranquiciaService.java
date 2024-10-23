@@ -8,4 +8,5 @@ public interface FranquiciaService {
 
     Franquicia crearFranquicia (Franquicia franquicia);
     Optional<Franquicia> consultarFranquiciaPorNombre (String nombre);
+
 }

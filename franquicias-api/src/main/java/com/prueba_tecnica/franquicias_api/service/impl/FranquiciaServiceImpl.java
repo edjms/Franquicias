@@ -25,4 +25,5 @@ public class FranquiciaServiceImpl implements FranquiciaService {
     public Optional<Franquicia> consultarFranquiciaPorNombre(String nombre) {
         return franquiciaRepository.findByNombre(nombre);
     }
+
 }

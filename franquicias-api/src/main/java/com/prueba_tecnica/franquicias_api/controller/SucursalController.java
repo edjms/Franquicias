@@ -4,6 +4,7 @@ import com.prueba_tecnica.franquicias_api.model.Sucursal;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("api/sucursal")
 public interface SucursalController {
@@ -13,4 +14,5 @@ public interface SucursalController {
 
     @GetMapping("/listar/{nombre}")
     ResponseEntity<Sucursal> consultarSucursalPorNombre(@PathVariable("nombre") String nombre);
+
 }
