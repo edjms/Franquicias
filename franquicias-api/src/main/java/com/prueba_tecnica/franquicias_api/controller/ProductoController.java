@@ -14,6 +14,10 @@ public interface ProductoController {
     @GetMapping("/listar/{nombre}")
     ResponseEntity<Producto> consultarProductoPorNombre(@PathVariable("nombre") String nombre);
 
+    @PostMapping("/actualizar/stock")
+    ResponseEntity<Producto> actualizarStockProducto(@RequestBody Producto producto);
+
     @DeleteMapping("/eliminar/{id}")
     ResponseEntity<String> eliminarProducto(@PathVariable("id") Long id);
 }
+

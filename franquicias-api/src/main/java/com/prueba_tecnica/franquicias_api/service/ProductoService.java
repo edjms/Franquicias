@@ -9,5 +9,6 @@ public interface ProductoService {
 
     Producto crearProducto (Producto producto);
     Optional<Producto> consultarPorNombre (String nombre);
+    Producto actualizarStockProducto (Producto producto);
     void EliminarProducto(Long id);
 }

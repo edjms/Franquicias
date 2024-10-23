@@ -29,6 +29,12 @@ public class ProductoControllerImpl implements ProductoController {
     }
 
     @Override
+    public ResponseEntity<Producto> actualizarStockProducto(Producto producto) {
+        Producto productoActualizado = productoService.actualizarStockProducto(producto);
+        return ResponseEntity.ok(productoActualizado);
+    }
+
+    @Override
     public ResponseEntity<String> eliminarProducto(Long id) {
         productoService.EliminarProducto(id);
         return new ResponseEntity<>("200 ok", HttpStatus.OK);

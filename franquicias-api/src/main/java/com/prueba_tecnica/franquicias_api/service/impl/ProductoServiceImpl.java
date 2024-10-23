@@ -34,6 +34,17 @@ public class ProductoServiceImpl implements ProductoService {
     }
 
     @Override
+    public Producto actualizarStockProducto(Producto producto) {
+        Optional<Producto> ExistenciaProducto = productoRepository.findByNombre(producto.getNombre());
+        if(!ExistenciaProducto.isPresent()){
+            throw new RuntimeException("No existe producto con nombre" + producto.getNombre());
+        }
+        Producto productoExistente = ExistenciaProducto.get();
+        productoExistente.setStock(producto.getStock());
+        return productoRepository.save(productoExistente);
+    }
+
+    @Override
     public void EliminarProducto(Long id) {
         productoRepository.deleteById(id);
     }
